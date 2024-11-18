@@ -38,18 +38,18 @@ module.exports = {
         "./App": "./src/App",
         "./Page": "./src/Remote1Page",
       },
-      // shared: {
-      //   react: {
-      //     singleton: true,
-      //     eager: false, // Ensure lazy loading
-      //     requiredVersion: "^17.0.0", // Adjust to your React version
-      //   },
-      //   "react-dom": {
-      //     singleton: true,
-      //     eager: false, // Ensure lazy loading
-      //     requiredVersion: "^17.0.0", // Adjust to your React DOM version
-      //   },
-      // },
+      shared: {
+        react: {
+          singleton: true,
+          eager: true, // Ensure lazy loading
+          requiredVersion: "18.3.1", // Adjust to your React version
+        },
+        "react-dom": {
+          singleton: true,
+          eager: true,
+          requiredVersion: "18.3.1",
+        },
+      },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
